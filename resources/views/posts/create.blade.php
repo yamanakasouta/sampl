@@ -9,6 +9,7 @@
         
     </head>
     <body class="antialiased">
+<<<<<<< HEAD
         <h1>Blog Name</h1>
         <form action="/posts" method="POST">
             @csrf
@@ -29,3 +30,19 @@
         </div>
     </body>
 </html>
+=======
+        <h1 class='title'>
+            {{ $post->title }}
+        </h1>
+        <div class='content'>
+                <div class='content_post'>
+                    <h3>本文</h3>
+                    <p class='body'>{{ $post->body }}</p>
+                </div>
+        </div>
+        <div class='footer'>
+            <a href="/">戻る</a>
+        </div>
+    </body>
+</html>
+>>>>>>> origin/master
