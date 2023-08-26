@@ -6,7 +6,7 @@
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600"rel="stylesheet">
-        
+           
     </head>
     <body class="antialiased">
         <h1 class='title'>
@@ -15,6 +15,7 @@
         <div class='content'>
                 <div class='content_post'>
                     <h3>本文</h3>
+                    <a href="">{{ $post->category->name }}</a>
                     <p class='body'>{{ $post->body }}</p>
                 </div>
         </div>
