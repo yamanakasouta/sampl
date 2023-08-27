@@ -21,12 +21,13 @@ class PostController extends Controller
     public function create(Category $category)
     {
         $categories = $category->get();
-        return view('posts.create',['catergories' => $categories]);
+        return view('posts.create',['categories' => $categories]);
     }
 
     public function store(PostRequest $request, Post $post)
     {
-        $input = $request['post'];
+        $post = new Post();
+        $input = $request->input('post');
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
     }
