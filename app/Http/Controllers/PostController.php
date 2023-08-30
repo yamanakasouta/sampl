@@ -26,7 +26,6 @@ class PostController extends Controller
 
     public function store(PostRequest $request, Post $post)
     {
-        $post = new Post();
         $input = $request->input('post');
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);

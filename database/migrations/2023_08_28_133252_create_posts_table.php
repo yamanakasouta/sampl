@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('body', 200);
             $table->timestamps();
             $table->softDeletes();
+            $table->unsignedBigInteger('category_id')->default(5);
         });
     }
 
